@@ -1,15 +1,27 @@
 body{
   font-family: 'Roboto Condensed', sans-serif;
+  background-color: coral;
 }
 .heading{
   text-align: center;
   font-size: 4em;
   border-bottom: 1px solid lightgrey;
+  width:100%
 }
 .subtext{
   text-align: center;
   font-size: 2em;
 }
-#place-order, #review-order, #order-placed, #deliver-input{
+#place-order, #review-order, #order-over, #deliver-input{
   display: none;
+}
+.carousel{
+  width:40%;
+  margin:auto;
+  border-radius: 4px;
+}
+.startOrder{
+  display: block;
+
+  margin: 5px auto;
 }

@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
     <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Scottie's Pizza Parlour</title>
   </head>
@@ -14,6 +15,36 @@
     <div class="container">
       <h3 class ="heading">Scottie's Pizza Parlour</h3>
       <h4 class="subtext">Hand-made | Locally Sourced | Artisinal </h4>
+      <!--Start carousel -->
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img/pizza3.jpg" alt="pizza">
+          </div>
+
+          <div class="item">
+            <img src="img/pizza2.png" alt="pizza">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div><!--end carousel-->
+
 
       <div id="welcome">
         <button class="startOrder btn" type="button">Place an order!</button>
@@ -51,15 +82,16 @@
             <input type="checkbox" name="topping" value="Ham"> Ham<br>
             <input type="checkbox" name="topping" value="Peperoni"> Peperoni<br>
             <input type="checkbox" name="topping" value="Anchovies"> Anchovies<br>
+
         </div><!--end meat-->
         <button class="btn"type="submit" name="review-order">Review Order</button>
       </form>
     </div> <!--end place order-->
       <div id="review-order" class="col-md-6 ">
         <h4>Your Order</h4>
-        <p><span class="customer-name"></span></p>
-        <p><span class="customer-toppings">  </p>
-        <p><span class="price">  </p>
+
+        <p><span class="pizza-size"></span> <span class="pizza-crust"> </span> Pizza, with <span class="customer-toppings"></p>
+        <p><span class="price">  </span></p>
         <select class="form-control" id="delivery">
             <option value="0">Please Select Pick-up or Delivery</option>
             <option value="Pick up">Pick-up</option>
@@ -71,16 +103,23 @@
       <div id="deliver-input" class="col-md-6">
         <form>
           <label for="name">Name</label>
-          <input type="text" name="name" placeholder="Name" class="form-control"></input>
+          <input type="text" name="name" placeholder="Name" class="form-control cust-name"></input>
           <label for="address">Street Address</label>
-          <input type="text" name="address" placeholder="Street Address" class="form-control"></input>
+          <input type="text" name="address" placeholder="Street Address" class="cust-add form-control"></input>
           <label for="number">Phone Number</label>
-          <input type="number" name="phone" placeholder="Phone number" class="form-control"></input>
-          <button type="submit" class="btn confirm"name="confirm">Confirm</button>
+          <input type="number" name="phone" placeholder="Phone number" class="cust-phone form-control"></input>
+          <button type="click" id="confirm" class="confirm btn" name="done-ordering">Confirm</button>
         </form>
       </div>
-      <div id="order-placed" class="well">
+      <div id="order-over">
+        <h3>Thank you <span class="customer-name"></span></h3>
 
+        <p>Your <span class="pizza-size2"></span> <span class="pizza-crust2"> </span>Pizza <span class="customer-toppings2"></span> <span class="which-one"> </span></p>
+        <p> <span class="price"> </span></p>
+
+
+
+        <h5></h5>
       </div>
     </div><!--end container-->
   </body>
