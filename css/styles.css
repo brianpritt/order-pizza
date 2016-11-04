@@ -1,5 +1,11 @@
-h3{
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+.heading{
   text-align: center;
+  font-size: 4em;
+  border-bottom: 1px solid lightgrey;
 }
 #place-order, #review-order{
   display: none;

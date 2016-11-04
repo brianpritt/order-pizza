@@ -8,6 +8,18 @@ function PizzaOrder(size, toppings, note, number ){
 var toppingsVeg=["tomatoes","olives","onions","bell peppers","mushrooms"]
 var toppingsMeat=["Sausage","ham","peperoni","anchovies"]
 
+PizzaOrder.prototype.price = function(myPizza){
+  var price = 0;
+  var toppingPrice;
+  if (myPizza.size === "Small"){price += 8}
+  else if (myPizza.size === "Medium"){price += 10}
+  else if (myPizza.size === "Large"){price += 12}
+  else if (myPizza.size === "Xtra-large"){price += 14}
+  toppingPrice = (myPizza.toppings.length) *.5;
+  price += toppingPrice;
+  return price;
+}
+
 $(document).ready(function(){
 
   var toppingArray = [];
@@ -33,6 +45,11 @@ $(document).ready(function(){
       $("#place-order").hide();
       $("#review-order").slideDown();
       $(".customer-order").text(myPizza.size);
+      $(".price").text(myPizza.price(myPizza));
     }
+  });
+  $("#place-order").click(function(){
+    $("review-order").hide();
+
   });
 });

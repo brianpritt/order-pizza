@@ -4,31 +4,35 @@
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Scottie's Pizza Parlour</title>
   </head>
   <body>
     <div class="container">
-      <h3 class ="well">Scottie's Pizza Parlour</h3>
+      <h3 class ="heading">Scottie's Pizza Parlour</h3>
+
       <div id="welcome">
         <button class="startOrder btn" type="button">Place an order!</button>
       </div>
       <div id="place-order">
-        <div><!--select for size-->
+        <div class="col-md-6"><!--select for size-->
           <form>
             <h3>Size</h3>
             <select class="form-control" id="size">
               <option value="0">Please select a size:</option>
-              <option value="1">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-              <option value="4">Xtra-Large</option>
+              <option value="Small">Small $8.00</option>
+              <option value="Medium">Medium $10.00</option>
+              <option value="Large">Large $12.00</option>
+              <option value="Xtra-large">Xtra-Large $14.00</option>
             </select>
           </form>
         </div><!--end select for size-->
-        <div>
+        <div class="col-md-6">
           <form id="toppings">
+            <h3>Toppings: $.50 each</h3>
             <input type="checkbox" name="topping" value="Tomatoes"> Tomatoes<br>
             <input type="checkbox" name="topping" value="Olives"> Olives<br>
             <input type="checkbox" name="topping" value="Onions"> Onions<br>
@@ -36,7 +40,7 @@
             <input type="checkbox" name="topping" value="Ham"> Ham<br>
             <input type="checkbox" name="topping" value="Peperoni"> Peperoni<br>
             <input type="checkbox" name="topping" value="Anchovies"> Anchovies<br>
-            <button class="btn"type="submit" name="place-order">Review Order</button>
+            <button class="btn"type="submit" name="review-order">Review Order</button>
           </form>
         </div>
       </div>
@@ -44,6 +48,8 @@
         <h4>Your Order</h4>
         <p><span class="customer-name"></span></p>
         <p><span class="customer-order">  </p>
+        <p><span class="price">  </p>
+        <button  class="place-order btn" type="button" name="place-order">Place Order</button>
       </div>
     </div>
   </body>
