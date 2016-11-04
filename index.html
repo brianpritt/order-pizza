@@ -13,12 +13,13 @@
   <body>
     <div class="container">
       <h3 class ="heading">Scottie's Pizza Parlour</h3>
+      <h4 class="subtext">Hand-made | Locally Sourced | Artisinal </h4>
 
       <div id="welcome">
         <button class="startOrder btn" type="button">Place an order!</button>
       </div>
       <div id="place-order">
-        <div class="col-md-6"><!--select for size-->
+        <div class="col-md-4"><!--select for size and crust-->
           <form>
             <h3>Size</h3>
             <select class="form-control" id="size">
@@ -28,29 +29,59 @@
               <option value="Large">Large $12.00</option>
               <option value="Xtra-large">Xtra-Large $14.00</option>
             </select>
+            <select class="form-control" id="crust">
+              <option value="0">Please select type of crust:</option>
+              <option value="New York Syle">New York Style</option>
+              <option value="Chicago Style">Chicago Style</option>
+              <option value="Stuffed Crust">Stuffed Crust (add $2.00)</option>
+
+            </select>
           </form>
-        </div><!--end select for size-->
-        <div class="col-md-6">
-          <form id="toppings">
-            <h3>Toppings: $.50 each</h3>
+        </div><!--end select for size and crust-->
+        <form id="toppings">
+          <div class="col-md-4">
+            <h3>Veggies: $.50 each</h3>
             <input type="checkbox" name="topping" value="Tomatoes"> Tomatoes<br>
             <input type="checkbox" name="topping" value="Olives"> Olives<br>
             <input type="checkbox" name="topping" value="Onions"> Onions<br>
+          </div><!--end veggies -->
+          <div class="col-md-4">
+            <h3>Meat $.50 eash</h3>
             <input type="checkbox" name="topping" value="Sausage"> Sausage<br>
             <input type="checkbox" name="topping" value="Ham"> Ham<br>
             <input type="checkbox" name="topping" value="Peperoni"> Peperoni<br>
             <input type="checkbox" name="topping" value="Anchovies"> Anchovies<br>
-            <button class="btn"type="submit" name="review-order">Review Order</button>
-          </form>
-        </div>
-      </div>
-      <div id="review-order" class="well">
+        </div><!--end meat-->
+        <button class="btn"type="submit" name="review-order">Review Order</button>
+      </form>
+    </div> <!--end place order-->
+      <div id="review-order" class="col-md-6 ">
         <h4>Your Order</h4>
         <p><span class="customer-name"></span></p>
-        <p><span class="customer-order">  </p>
+        <p><span class="customer-toppings">  </p>
         <p><span class="price">  </p>
-        <button  class="place-order btn" type="button" name="place-order">Place Order</button>
+        <select class="form-control" id="delivery">
+            <option value="0">Please Select Pick-up or Delivery</option>
+            <option value="Pick up">Pick-up</option>
+            <option value="Delivery">Delivery</option>
+        </select>
+        <button class="place-order btn" type="button" name="place-order">Place Order</button>
+        <button class="change-order btn" type="button" name="button">Change Order</button>
+      </div><!--end review order-->
+      <div id="deliver-input" class="col-md-6">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="Name" class="form-control"></input>
+          <label for="address">Street Address</label>
+          <input type="text" name="address" placeholder="Street Address" class="form-control"></input>
+          <label for="number">Phone Number</label>
+          <input type="number" name="phone" placeholder="Phone number" class="form-control"></input>
+          <button type="submit" class="btn confirm"name="confirm">Confirm</button>
+        </form>
       </div>
-    </div>
+      <div id="order-placed" class="well">
+
+      </div>
+    </div><!--end container-->
   </body>
 </html>

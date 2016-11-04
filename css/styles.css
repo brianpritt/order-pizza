@@ -1,12 +1,15 @@
 body{
   font-family: 'Roboto Condensed', sans-serif;
-
 }
 .heading{
   text-align: center;
   font-size: 4em;
   border-bottom: 1px solid lightgrey;
 }
-#place-order, #review-order{
+.subtext{
+  text-align: center;
+  font-size: 2em;
+}
+#place-order, #review-order, #order-placed, #deliver-input{
   display: none;
 }
