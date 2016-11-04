@@ -1,0 +1,6 @@
+h3{
+  text-align: center;
+}
+#place-order, #review-order{
+  display: none;
+}
