@@ -49,9 +49,13 @@
         </a>
       </div><!--end carousel-->
 
+      <nav id="contact">
+        (330) 555-1212 |
+        4120 S Main St. Columbus OH
 
+      </nav>
       <div id="welcome">
-        <button class="startOrder btn" type="button">Place an order!</button>
+        <button class="startOrder btn btn-info" type="button">Place an order!</button>
       </div>
       <div id="place-order">
         <div class="col-md-4"><!--select for size and crust-->
@@ -81,28 +85,28 @@
             <input type="checkbox" name="topping" value="Onions"> Onions<br>
           </div><!--end veggies -->
           <div class="col-md-4">
-            <h3>Meat $.50 eash</h3>
+            <h3>Meat $.50 each</h3>
             <input type="checkbox" name="topping" value="Sausage"> Sausage<br>
             <input type="checkbox" name="topping" value="Ham"> Ham<br>
             <input type="checkbox" name="topping" value="Peperoni"> Peperoni<br>
             <input type="checkbox" name="topping" value="Anchovies"> Anchovies<br>
 
         </div><!--end meat-->
-        <button class="btn"type="submit" name="review-order">Review Order</button>
+        <button class="btn btn-info"type="submit" name="review-order">Review Order</button>
       </form>
     </div> <!--end place order-->
       <div id="review-order" class="col-md-6 ">
         <h4>Your Order</h4>
 
-        <p><span class="pizza-size"></span> <span class="pizza-crust"> </span> Pizza, with <span class="customer-toppings"></p>
+        <p><span class="pizza-size"></span> <span class="pizza-crust"> </span> Pizza  <span class="customer-toppings"></p>
         <p><span class="price">  </span></p>
         <select class="form-control" id="delivery">
             <option value="0">Please Select Pick-up or Delivery</option>
             <option value="Pick up">Pick-up</option>
             <option value="Delivery">Delivery</option>
         </select>
-        <button class="place-order btn" type="button" name="place-order">Place Order</button>
-        <button class="change-order btn" type="button" name="button">Change Order</button>
+        <button class="place-order btn btn-info" type="button" name="place-order">Place Order</button>
+        <button class="change-order btn btn-info" type="button" name="button">Change Order</button>
       </div><!--end review order-->
       <div id="deliver-input" class="col-md-6">
         <form>
@@ -112,7 +116,7 @@
           <input type="text" name="address" placeholder="Street Address" class="cust-add form-control"></input>
           <label for="number">Phone Number</label>
           <input type="number" name="phone" placeholder="Phone number" class="cust-phone form-control"></input>
-          <button type="click" id="confirm" class="confirm btn" name="done-ordering">Confirm</button>
+          <button type="click" id="confirm" class="confirm btn btn-info" name="done-ordering">Confirm</button>
         </form>
       </div>
       <div id="order-over">
@@ -120,6 +124,7 @@
 
         <p>Your <span class="pizza-size2"></span> <span class="pizza-crust2"> </span>Pizza <span class="customer-toppings2"></span> <span class="which-one"> </span></p>
         <p> <span class="price"> </span></p>
+        <button type="button" name="button"class="done btn btn-info">Done!</button>
 
 
 
